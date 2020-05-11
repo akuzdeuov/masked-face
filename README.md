@@ -1,7 +1,7 @@
 # masked-face
 COVID-19 pandemic has changed our social life. We need to keep social distancing and wear a mask in public places. The latter is a problem for existing face detection/recognition deep learning models which were trained on faces without masks. The solution might be to train these networks on a dataset which contains masked faces. One of the possible options to create the mentioned dataset is to collect images from the Internet and label them manually. It takes large amount of time and human effort. Another option is to artificially "wear" the mask on faces.
 
-This repo allows us to automatically detect faces on the image using HOG/CNN models and extract facial landmarks of each face. Then, it uses facial landmarks to estimate a homography matrix between the face and an image of the mask. Finally, the image of the mask is "worn" to the face using the homography matrix. 
+This repo allows us to automatically detect faces on the image and "wear" mask on them. A homography matrix between each detected face and the image of the mask was estimated to properly insert the mask. The available face detection methods are HOG and CNN. The output images and bounding boxes of faces are saved.   
 
 ## Dependencies
 1. Ubuntu 16.04
@@ -18,6 +18,7 @@ pip3 install face_recognition
 
 ## How to use?
 1. Clone this github repo
+
 *git clone https://github.com/akuzdeuov/masked-face.git*
 
 *cd masked-face*
