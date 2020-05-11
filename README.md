@@ -13,6 +13,7 @@ This repo allows us to automatically detect faces on the image using HOG/CNN mod
 
 ## How to install packages?
 pip3 install imutils 
+
 pip3 install face_recognition
 
 ## How to use?
