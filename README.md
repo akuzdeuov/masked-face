@@ -18,16 +18,22 @@ pip3 install face_recognition
 
 ## How to use?
 1. Clone this github repo
-*git clone https://github.com/akuzdeuov/masked-face.git
-*cd masked-face
+*git clone https://github.com/akuzdeuov/masked-face.git*
+
+*cd masked-face*
 
 2. The main script **generate_dataset.py** has the following input arguments:
+
 **--dataset**: path to the input dataset with images.
+
 **--mask**: image of the mask. In case if you want to use another image of the mask then make sure that its background is absolutely black.
+
 **--face_detector**: model for face detection. You have three options: **hog/cnn/dnn**. **hog** - histogram of oriented gradients algorithm and **cnn** - convolutional neural network based model. Both models are provided by **face_recognition** library. The last option **dnn** is a pre-trained deep neural network model which comes with OpenCV 4.0.0. The default option is **hog**.
+
 **--confidence**: a minimum probability for OpenCV's **dnn** model. The default value is 0.9 (90%).
 
 3. Run the code:
+
 **python generate_dataset.py --dataset dataset/ --mask blue_mask.png** 
 
 4. Output images and a pickle file with bounding box coordinates are saved in **./output** folder.
@@ -43,5 +49,5 @@ pip3 install face_recognition
 ### Output:
 ![example1](https://github.com/akuzdeuov/masked-face/blob/master/output/example_1.jpg)
 
-Here we can see that some faces were not detected on the second image. Because we use **hog** by default. If we switch to **cnn** mode which is more accurate but slower:
+Here we can see that some faces were not detected on the second image. Because we used **hog** model by default. If we switch to **cnn** mode which is more accurate but significantly slower:
 ![example_1cnn](https://github.com/akuzdeuov/masked-face/blob/master/output/example_1_cnn.jpg)
