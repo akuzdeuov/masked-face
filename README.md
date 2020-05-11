@@ -1,0 +1,3 @@
+# masked-face
+COVID-19 pandemic has changed our social life. We need to keep social distancing and wear a mask in public places. The latter is a problem for existing face detection/recognition deep learning models which were trained on faces without the mask. The solution might be to train these networks on a dataset which contains masked faces. 
+The code automatically detects faces on the image using HOG/CNN models and extracts facial landmarks for each face. Then, it uses facial landmarks to estimate a homography matrix between the face and an image of the mask. Finally, the image of the mask is "worn" to the face using the homography matrix. 
