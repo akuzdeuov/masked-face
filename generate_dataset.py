@@ -77,7 +77,6 @@ for ind, imagePath in enumerate(imagePaths):
 			break
 		
 # save the bbox dictionary data
-print(bbox_dict)
 bbox_file = open("output/bbox.pkl", "wb")
 pickle.dump(bbox_dict, bbox_file)
 bbox_file.close()
