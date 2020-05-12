@@ -1,7 +1,7 @@
 # masked-face
-COVID-19 pandemic has changed our social life. We need to keep social distancing and wear a mask in public places. The latter is a problem for existing face detection/recognition deep learning models which were trained on faces without masks. The solution might be to train these networks on a dataset which contains masked faces. One of the possible options to create the mentioned dataset is to collect images from the Internet and label them manually. It takes large amount of time and human effort. Another option is to artificially "wear" the mask on faces.
+COVID-19 pandemic has changed the world we used to know. We have to keep social distancing and wear masks in public places. The latter is a problem for face detection/recognition models which were trained mainly on faces without masks. A possible solution to overcome this issue is to train a model on a dataset which contains masked faces, and one of the options to create the mentioned dataset is to collect images of faces with masks from the Internet and draw bounding boxes on them manually. However, this process takes large amount of time and human effort. Another option is to artificially "wear" the mask on faces.  
 
-This repo allows us to automatically detect faces on the image and "wear" mask on them. A homography matrix between each detected face and the image of the mask was estimated to properly insert the mask. The available face detection methods are HOG and CNN. The output images and bounding boxes of faces are saved.   
+This repo allows us to automatically detect faces on the image and "wear" mask on them. A homography matrix between each detected face and the image of the mask was estimated to properly insert the mask. The available face detection methods are HOG and CNN. The output images with corresponding bounding boxes are saved in a folder for further usage.   
 
 ## Dependencies
 1. Ubuntu 16.04
