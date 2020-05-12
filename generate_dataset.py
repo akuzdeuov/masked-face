@@ -46,15 +46,16 @@ for ind, imagePath in enumerate(imagePaths):
 	# load the image
 	image = cv2.imread(imagePath)
 
-	# detect faces and extract
-	# corresponding facial landmarks
+	# detect faces on the image
+	# using the selected model
 	if model != "dnn":
 		face_locations = face_recognition.face_locations(image, model=model)
-		face_landmarks = face_recognition.face_landmarks(image, face_locations)
 	else:
 		face_locations = face_detector(face_net, image, threshold)
-		face_landmarks = face_recognition.face_landmarks(image, face_locations)
 
+	# extract the facial landmarks
+	face_landmarks = face_recognition.face_landmarks(image, face_locations)
+	
 	# wear the mask on faces if facial 
 	# landmarks were extracted
 	if face_landmarks:
