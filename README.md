@@ -51,4 +51,7 @@ pip3 install face_recognition
 ![example1](https://github.com/akuzdeuov/masked-face/blob/master/output/example_1.jpg)
 
 Here we can see that some faces were not detected on the second image. Because we used **hog** model by default. If we switch to **cnn** mode which is more accurate but significantly slower:
+
+**python generate_dataset.py --dataset dataset/ --mask blue_mask.png --face_detector cnn**
+
 ![example_1cnn](https://github.com/akuzdeuov/masked-face/blob/master/output/example_1_cnn.jpg)
