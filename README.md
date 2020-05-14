@@ -5,7 +5,7 @@ This repo allows us to automatically detect faces on the image and "wear" mask o
 
 ## Dependencies
 1. Ubuntu 16.04
-2. Python 3.5.2 
+2. Python 2 or 3 (reccommendend)
 3. OpenCV 4.0.0
 4. NumPy
 5. imutils
@@ -35,7 +35,7 @@ pip3 install face_recognition
 
 3. Run the code:
 
-**python generate_dataset.py --dataset dataset/ --mask blue_mask.png** 
+**python3 generate_dataset.py --dataset dataset/ --mask blue_mask.png** 
 
 4. Output images and a pickle file with bounding box coordinates are saved in **./output** folder.
 
@@ -52,6 +52,6 @@ pip3 install face_recognition
 
 Here we can see that some faces were not detected on the second image. Because we used **hog** model by default. If we switch to **cnn** mode which is more accurate but significantly slower:
 
-**python generate_dataset.py --dataset dataset/ --mask blue_mask.png --face_detector cnn**
+**python3 generate_dataset.py --dataset dataset/ --mask blue_mask.png --face_detector cnn**
 
 ![example_1cnn](https://github.com/akuzdeuov/masked-face/blob/master/output/example_1_cnn.jpg)
